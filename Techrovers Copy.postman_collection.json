@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "2e855dc0-d896-487a-9073-bcfe71a8327d",
+		"name": "Techrovers Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserOperations",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "workflexi_service_account",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rajan\",\r\n    \"username\": \"rajank\",\r\n    \"email\": \"rajan@test.com\",\r\n    \"mobile\": \"98521234444\",\r\n    \"role\": {\r\n        \"_id\": \"60f972c39dd8e6861bc9bdfe\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/saveUser/60f973041c618533f5318a11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"saveUser",
+								"60f973041c618533f5318a11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AdminUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Raja1n\",\r\n    \"username\": \"rajan1k\",\r\n    \"email\": \"raj1an@test.com\",\r\n    \"mobile\": \"9812134578\",\r\n    \"role\": {\r\n        \"_id\": \"60f972a09dd8e6861bc9bdfd\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/saveAdminUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"saveAdminUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ItemOperations",
+			"item": [
+				{
+					"name": "getItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item/getItems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"getItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nike Shoes\",\r\n    \"itemDesc\": \"Good shoes for football\",\r\n    \"totalPrice\": 3000,\r\n    \"gst\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/item/saveItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"saveItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getItemsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item/getItems/60f979a96e98577f107917ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"getItems",
+								"60f979a96e98577f107917ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllInvoicesByItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item/getInvoices/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"getInvoices",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "InvoiceOperations",
+			"item": [
+				{
+					"name": "getAllInvoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/invoice/getAllInvoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"invoice",
+								"getAllInvoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllInvoiceByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/invoice/getAllInvoices/60f9c5d297d8490456285de2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"invoice",
+								"getAllInvoices",
+								"60f9c5d297d8490456285de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveInvoiceDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"invoiceDetails\" : [\r\n       {\r\n           \"itemId\": \"60f9c59a97d8490456285de0\",\r\n           \"quantity\": 1\r\n       },\r\n       {\r\n           \"itemId\": \"60f9c5a397d8490456285de1\",\r\n           \"quantity\": 4\r\n       }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/invoice/saveInvoiceInformation/60f9c57097d8490456285dde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"invoice",
+								"saveInvoiceInformation",
+								"60f9c57097d8490456285dde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
